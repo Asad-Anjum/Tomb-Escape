@@ -22,4 +22,18 @@ public class CharacterController : MonoBehaviour
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.tag == "ffw")
+        {
+            speed *= 1.5f;
+            Destroy(col.gameObject);
+        }
+        if(col.tag == "bwd")
+        {
+            speed *= 0.66f;
+            Destroy(col.gameObject);
+        }
+    }
+
 }
