@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6145712268639808453}
   - component: {fileID: 8176633246386764147}
   - component: {fileID: 1681607644}
+  - component: {fileID: -7269346089353477333}
+  - component: {fileID: -1263478802312670249}
   m_Layer: 8
   m_Name: Burn Out 2 Torches
   m_TagString: Untagged
@@ -101,3 +103,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-7269346089353477333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661573097551437543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a0a85a0de4304bb543021b8ade6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: e82ef6b63e5e2e14c86995dc0a4b194c, type: 2}
+--- !u!114 &-1263478802312670249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661573097551437543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca807f1e6d21f24bb72ed33c39b0aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: e82ef6b63e5e2e14c86995dc0a4b194c, type: 2}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4460102503669451969}
   - component: {fileID: 3961636903330399854}
   - component: {fileID: 1303162394}
+  - component: {fileID: -798225458513589524}
+  - component: {fileID: -8886244121721049411}
   m_Layer: 8
   m_Name: Map
   m_TagString: Untagged
@@ -101,3 +103,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!114 &-798225458513589524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031662973775787474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a0a85a0de4304bb543021b8ade6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 3cb22a4dac1679946a837e9d2438bbf3, type: 2}
+--- !u!114 &-8886244121721049411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031662973775787474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca807f1e6d21f24bb72ed33c39b0aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 3cb22a4dac1679946a837e9d2438bbf3, type: 2}

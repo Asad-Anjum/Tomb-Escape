@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4603401263481544972}
   - component: {fileID: 5361628092481577049}
   - component: {fileID: 1172207843}
+  - component: {fileID: -4751090138260264715}
+  - component: {fileID: -5715317389207814909}
   m_Layer: 8
   m_Name: Enrage
   m_TagString: Untagged
@@ -101,3 +103,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-4751090138260264715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551465178537946956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a0a85a0de4304bb543021b8ade6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 43a462f7e7612464fa6fb56623efced0, type: 2}
+--- !u!114 &-5715317389207814909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551465178537946956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca807f1e6d21f24bb72ed33c39b0aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 43a462f7e7612464fa6fb56623efced0, type: 2}

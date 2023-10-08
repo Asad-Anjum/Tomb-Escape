@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2979506337407770633}
   - component: {fileID: 5496958267740014417}
   - component: {fileID: 1280286050}
+  - component: {fileID: -7382628650090733819}
+  - component: {fileID: 4567327549285129468}
   m_Layer: 8
   m_Name: Brighter Torch
   m_TagString: Untagged
@@ -101,3 +103,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-7382628650090733819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533380344845404849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a0a85a0de4304bb543021b8ade6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: b8425a17cc80e0d4dbbc89381c4f1204, type: 2}
+--- !u!114 &4567327549285129468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533380344845404849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca807f1e6d21f24bb72ed33c39b0aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: b8425a17cc80e0d4dbbc89381c4f1204, type: 2}
