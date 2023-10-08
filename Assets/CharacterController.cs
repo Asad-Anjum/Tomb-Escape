@@ -34,16 +34,16 @@ public class CharacterController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "ffw")
-        {
-            speed *= 1.25f;
-            Destroy(col.gameObject);
-        }
-        if(col.tag == "bwd")
-        {
-            speed *= 0.8f;
-            Destroy(col.gameObject);
-        }
+        // if(col.tag == "ffw")
+        // {
+        //     speed *= 1.25f;
+        //     Destroy(col.gameObject);
+        // }
+        // if(col.tag == "bwd")
+        // {
+        //     speed *= 0.8f;
+        //     Destroy(col.gameObject);
+        // }
         if(col.tag == "Artifact")
         {
             gc.escaping = true;
