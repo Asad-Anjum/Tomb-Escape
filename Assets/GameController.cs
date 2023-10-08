@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
                 if(obs[i].layer == torchLayer)
                 {
                     obs[i].GetComponent<Collider2D>().enabled = false;
-                }
+                } 
 
             }
         }
