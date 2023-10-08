@@ -1,32 +1,26 @@
 ﻿using Edgar.Unity;
-using Edgar.Unity.Examples;
-using Edgar.Unity.Examples.Example1;
 using UnityEngine;
-using System.Collections;
 
 namespace GameManager
 {
-    public class LevelManager : GameManagerBase<Example1GameManager>
+    public class LevelManager : MonoBehaviour
     {
+        private DungeonGeneratorGrid2D _generator;
+        
+        private void Awake()
+        {
+            _generator = GameObject.Find("Dungeon Generator").GetComponent<DungeonGeneratorGrid2D>();
+        }
+
         private void Start()
         {
-            LoadNextLevel();
+            // GenerateLevel();
         }
 
-        public override void LoadNextLevel()
+        private void GenerateLevel()
         {
-            // Find the generator runner
-            var generator = GameObject.Find("Dungeon Generator").GetComponent<DungeonGeneratorGrid2D>();
-
             // Start the generator coroutine
-            StartCoroutine(GeneratorCoroutine(generator));
-        }
-
-
-        private IEnumerator GeneratorCoroutine(DungeonGeneratorGrid2D generator)
-        {
-            generator.Generate();
-            yield return null;
+            StartCoroutine(_generator.GenerateCoroutine());
         }
     }
 }
