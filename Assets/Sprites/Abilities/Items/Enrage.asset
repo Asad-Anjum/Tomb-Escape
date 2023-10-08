@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Enrage
   value: 2
   icon: {fileID: 21300000, guid: 888f7f497af1c284c8e609a6561556bd, type: 3}
+  itemType: 2

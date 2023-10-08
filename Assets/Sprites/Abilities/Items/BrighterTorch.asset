@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Brighter Torch
   value: 6
   icon: {fileID: 21300000, guid: f51e91be042da70488a52835d80019d2, type: 3}
+  itemType: 7

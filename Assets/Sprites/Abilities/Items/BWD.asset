@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: BWD
   value: 9
   icon: {fileID: 21300000, guid: 3249ba886b674f84fb2a361ac0305e73, type: 3}
+  itemType: 1

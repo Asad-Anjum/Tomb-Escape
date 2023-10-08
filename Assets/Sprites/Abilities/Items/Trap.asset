@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Trap
   value: 4
   icon: {fileID: 21300000, guid: c42fc302009d27f4a8e6e6cb1baa0cae, type: 3}
+  itemType: 3

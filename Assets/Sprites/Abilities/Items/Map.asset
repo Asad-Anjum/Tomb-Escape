@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Map
   value: 7
   icon: {fileID: 21300000, guid: e39f3473799693546a37b4bfd26ee2b2, type: 3}
+  itemType: 4

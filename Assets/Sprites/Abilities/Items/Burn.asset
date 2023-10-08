@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Burn
   value: 3
   icon: {fileID: 21300000, guid: 203688ef6d8f32e4bb7499846a6f00db, type: 3}
+  itemType: 6

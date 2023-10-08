@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Marker
   value: 8
   icon: {fileID: 21300000, guid: a7b256526c28b2f4fb4d557bb73e50b6, type: 3}
+  itemType: 5

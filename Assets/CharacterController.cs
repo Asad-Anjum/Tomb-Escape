@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public static CharacterController Instance;
+
+
     public float speed = 2.0f;
     Vector2 movement;
     public Rigidbody2D rb;
     public Animator anim;
     Vector2 direction;
     public GameController gc;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Update()
     {
@@ -34,21 +42,48 @@ public class CharacterController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        // if(col.tag == "ffw")
-        // {
-        //     speed *= 1.25f;
-        //     Destroy(col.gameObject);
-        // }
-        // if(col.tag == "bwd")
-        // {
-        //     speed *= 0.8f;
-        //     Destroy(col.gameObject);
-        // }
         if(col.tag == "Artifact")
         {
             gc.escaping = true;
             Destroy(col.gameObject);
         }
+    }
+
+    public void FastForward()
+    {
+        speed *= 1.25f;
+    }
+    public void Rewind()
+    {
+        speed *= 0.8f;
+    }
+    public void Enrage()
+    {
+        Debug.Log("Enrage");
+    }
+    public void Trap()
+    {
+        Debug.Log("Trap");
+    }
+    public void Map()
+    {
+        Debug.Log("Map");
+    }
+    public void Marker()
+    {
+        Debug.Log("Marker");
+    }
+    public void Burn()
+    {
+        Debug.Log("Burn");
+    }
+    public void Brighter()
+    {
+        Debug.Log("Brighter");
+    }
+    public void BurnOut()
+    {
+        Debug.Log("Burn Out");
     }
 
 

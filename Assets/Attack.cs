@@ -39,7 +39,6 @@ public class Attack : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
 
 
-        // Debug.Log(transform.eulerAngles.z);
         if(attacking)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
