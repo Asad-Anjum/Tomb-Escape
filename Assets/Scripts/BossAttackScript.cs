@@ -20,6 +20,8 @@ public class BossAttackScript : MonoBehaviour
     public Transform playerTrans;
     public float attackTriggerDistance = 1.5f;
     public AudioSource stabSFX;
+    public AudioSource hitSFX;
+    public AudioSource missedSFX;
 
     // Update is called once per frame
     void Update()
@@ -50,12 +52,13 @@ public class BossAttackScript : MonoBehaviour
         if (attacking)
         {
             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
-            Debug.Log(RangeX);
+
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 if (enemiesToDamage[i].gameObject.tag == "Player")
+                {
                     // WHAT should happen to player?;
-                    ;
+                }
             }
             duration -= Time.deltaTime;
         }
