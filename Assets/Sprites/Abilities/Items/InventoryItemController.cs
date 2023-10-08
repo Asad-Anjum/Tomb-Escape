@@ -41,9 +41,6 @@ public class InventoryItemController : MonoBehaviour
             case Item.ItemType.marker:
                 CharacterController.Instance.Marker();
                 break;
-            case Item.ItemType.burn:
-                CharacterController.Instance.Burn();
-                break;
             case Item.ItemType.brighter:
                 CharacterController.Instance.Brighter();
                 break;

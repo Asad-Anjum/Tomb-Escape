@@ -12,6 +12,8 @@ TagManager:
   - ffw
   - Global Light
   - Chaser
+  - Burn
+  - Burn Text
   layers:
   - Default
   - TransparentFX

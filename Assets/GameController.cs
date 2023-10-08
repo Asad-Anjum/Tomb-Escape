@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public bool escaping = false;
+    public bool activate = false;
     private GameObject[] obs;
+    public int burns;
 
     void Start()
     {
@@ -13,8 +15,9 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        burns = CharacterController.Instance.burns;
         obs = (GameObject[]) Object.FindObjectsOfType(typeof(GameObject));
-        if(escaping)
+        if(activate)
         {
             int abilityLayer = LayerMask.NameToLayer("Abilities");
             int enemyLayer = LayerMask.NameToLayer("Enemy");
@@ -41,16 +44,25 @@ public class GameController : MonoBehaviour
                 } 
 
             }
+            activate = false;
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonDown(1) && escaping)
         {
             List<Item> Items = InventoryManager.Instance.Items;
             UseItem(Items[Items.Count - 1]);
             InventoryManager.Instance.Remove(Items[Items.Count - 1]);
             //Destroy(InventoryManager.Instance.InventoryItems[0].gameObject);
         }
+
+        if(Input.GetKeyDown(KeyCode.Q) && escaping && burns > 0)
+        {
+            List<Item> Items = InventoryManager.Instance.Items;
+            InventoryManager.Instance.Remove(Items[Items.Count - 1]);
+            CharacterController.Instance.burns--;
+        }
         
+
 
     }
 
@@ -75,9 +87,6 @@ public class GameController : MonoBehaviour
                 break;
             case Item.ItemType.marker:
                 CharacterController.Instance.Marker();
-                break;
-            case Item.ItemType.burn:
-                CharacterController.Instance.Burn();
                 break;
             case Item.ItemType.brighter:
                 CharacterController.Instance.Brighter();
