@@ -3,16 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Walls
-  - ffw
-  - bwd
-  - Enemy
-  - Global Light
-  - Torch
-  - Ability
-  - Artifact
-  - Player Torch
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
-  - Abilities
-  - Torch
+  - 
+  - 
+  - 
   - 
   - 
   - 
