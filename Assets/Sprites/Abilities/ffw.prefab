@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3665703592935964260}
   - component: {fileID: 506180764552146008}
   - component: {fileID: 8962088006631787390}
+  - component: {fileID: 6207694248893554341}
+  - component: {fileID: -4571678868705422678}
   m_Layer: 8
   m_Name: ffw
   m_TagString: ffw
@@ -101,3 +103,29 @@ CircleCollider2D:
   m_Offset: {x: -0.06, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6207694248893554341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529640464295290527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7a0a85a0de4304bb543021b8ade6ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: afed3e3df482dfa41a4e6761a7358d2a, type: 2}
+--- !u!114 &-4571678868705422678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529640464295290527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca807f1e6d21f24bb72ed33c39b0aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: afed3e3df482dfa41a4e6761a7358d2a, type: 2}
