@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Pathfinding;
 
 public class BossAttackScript : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class BossAttackScript : MonoBehaviour
     private void Start()
     {
         playerTrans = GameObject.Find("Player").transform;
+        gameObject.GetComponent<AIDestinationSetter>().target = playerTrans;
     }
 
     void Update()

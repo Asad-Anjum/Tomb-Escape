@@ -203,7 +203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: 386d8cf2ecca1ed41a3faf2e66ab0776, type: 3}
   m_Color: {r: 0.28995395, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -614,7 +614,6 @@ MonoBehaviour:
     m_Bits: 512
   anim: {fileID: 5702305826066378684}
   attackDuration: 0.2
-  playerTrans: {fileID: 0}
   attackTriggerDistance: 1.25
   stabSFX: {fileID: 5702305826066378659}
   hitSFX: {fileID: 5702305826066378662}

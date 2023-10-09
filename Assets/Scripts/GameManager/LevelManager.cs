@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Edgar.Unity;
 using UnityEngine;
+using Pathfinding;
 
 namespace GameManager
 {
@@ -10,6 +11,7 @@ namespace GameManager
         private DungeonGeneratorGrid2D _generator;
         private LevelInfoGrid2D _levelInfo;
         public GameObject player;
+        public AstarPath _pathfinder;
 
         private void Awake()
         {
@@ -26,10 +28,10 @@ namespace GameManager
         {
             // Start the generator coroutine
             _generator.Generate();
-            
-            
+
             // start calculation A*
-            
+            _pathfinder.Scan();
+
             yield break;
         }
     }
