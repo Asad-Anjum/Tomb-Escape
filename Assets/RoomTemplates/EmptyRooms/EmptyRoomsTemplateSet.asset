@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0feb0fe3ca387448cff6947dd58ed6, type: 3}
   m_Name: EmptyRoomsTemplateSet
   m_EditorClassIdentifier: 
-  RoomTemplates: []
+  RoomTemplates:
+  - {fileID: 6344563002007095720, guid: e79f3671fb6478a42acaa73d0358ce59, type: 3}
+  - {fileID: 6344563002007095720, guid: c0b0cb57f7a7df74d9113713aad7703c, type: 3}
+  - {fileID: 9220236716176498252, guid: 8e19ec63fdb02ae4fb619109bbe85cb2, type: 3}
+  - {fileID: 4933017584842437117, guid: 436d6c673dc161c4192872a7e9739e97, type: 3}
+  - {fileID: 520409652557903040, guid: 180a7faa6128017439479924ddb9f029, type: 3}
+  - {fileID: 6285836244922106877, guid: a9c8cf88683cbb24ca577de2d44fcbb9, type: 3}
+  - {fileID: 5707458839441005740, guid: d2c6c78dd0fd8a147a9a8306ad093311, type: 3}
