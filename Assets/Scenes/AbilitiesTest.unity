@@ -45682,7 +45682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escaping: 0
   activate: 0
-  burns: 1
+  burns: 0
 --- !u!114 &1598839137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53362,6 +53362,10 @@ PrefabInstance:
     - target: {fileID: 5702305826066378663, guid: 02d9f2ba8dde9ae48ae73179cc8efac1, type: 3}
       propertyPath: m_Name
       value: evil
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702305826066378663, guid: 02d9f2ba8dde9ae48ae73179cc8efac1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5702305826066378679, guid: 02d9f2ba8dde9ae48ae73179cc8efac1, type: 3}
       propertyPath: m_RootOrder

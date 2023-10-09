@@ -839,9 +839,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831124503}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00000011920929, y: -0.00000023841858, z: -9.999999}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1882497237}
@@ -1099,15 +1099,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042497706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52f8da61675586f43bc86896234ace78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burnText: {fileID: 0}
   speed: 4
   rb: {fileID: 2042497709}
   anim: {fileID: 2042497707}
   gc: {fileID: 0}
+  burns: 0
 --- !u!212 &2042497711
 SpriteRenderer:
   m_ObjectHideFlags: 0
