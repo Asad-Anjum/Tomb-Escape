@@ -6,6 +6,7 @@ using TMPro;
 public class CharacterController : MonoBehaviour
 {
     public static CharacterController Instance;
+    public List<LightTorch> lt = new List<LightTorch>();
 
     public TMP_Text burnText;
     public float speed = 2.0f;
@@ -24,6 +25,7 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(speed);
         burnText.text = "Burns: " + burns.ToString();
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -53,21 +55,17 @@ public class CharacterController : MonoBehaviour
             Destroy(col.gameObject);
         }
 
-        if (col.tag == "Burn")
-        {
-            burns++;
-            Destroy(col.gameObject);
-        }
+
     }
 
     public void FastForward()
     {
-        speed *= 1.25f;
+        speed *= 1.15f;
     }
 
     public void Rewind()
     {
-        speed *= 0.8f;
+        speed *= 0.87f;
     }
 
     public void Enrage()
@@ -98,6 +96,19 @@ public class CharacterController : MonoBehaviour
 
     public void BurnOut()
     {
-        Debug.Log("Burn Out");
+        if(lt != null && lt.Count > 2)
+        {
+            int first = Random.Range(0, lt.Count);
+            int second = Random.Range(0, lt.Count);
+            lt[first].lit = false;
+            lt[first].light.intensity = 0;
+            lt[first].anim.SetBool("lit", false);
+
+            lt[second].lit = false;
+            lt[second].light.intensity = 0;
+            lt[second].anim.SetBool("lit", false);
+            lt.Remove(lt[first]);
+            lt.Remove(lt[second]);
+        }
     }
 }

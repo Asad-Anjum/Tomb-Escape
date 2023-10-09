@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    
+
     public bool escaping = false;
     public bool activate = false;
     private GameObject[] obs;
     public int burns;
+
+
 
     void Start()
     {

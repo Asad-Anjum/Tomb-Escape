@@ -21,11 +21,12 @@ public class LightTorch : MonoBehaviour
         if(col.tag == "Player")
         {
 
-            if(Input.GetKey(KeyCode.E))
+            if(Input.GetKey(KeyCode.E) && !lit)
             {
                 lit = true;
                 light.intensity = 1;
                 anim.SetBool("lit", true);
+                CharacterController.Instance.lt.Add(this);
             }
                 
         }

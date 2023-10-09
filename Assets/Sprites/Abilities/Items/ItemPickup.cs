@@ -6,17 +6,6 @@ public class ItemPickup : MonoBehaviour
 {
     public Item Item;
 
-    void Pickup()
-    {
-        InventoryManager.Instance.Add(Item);
-        Destroy(gameObject);
-    }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.tag == "Player")
-        {
-            Pickup();
-        }
-    }
+
 }
