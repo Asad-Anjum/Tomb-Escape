@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class CharacterController : MonoBehaviour
 {
@@ -17,9 +19,19 @@ public class CharacterController : MonoBehaviour
     public GameController gc;
     public int burns;
 
+    public GameObject map;
+    private GameObject _marker;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        map.SetActive(false);
+        _marker = transform.Find("Circle").gameObject;
+        _marker.SetActive(false);
     }
 
 
@@ -54,8 +66,6 @@ public class CharacterController : MonoBehaviour
             gc.escaping = true;
             Destroy(col.gameObject);
         }
-
-
     }
 
     public void FastForward()
@@ -80,12 +90,12 @@ public class CharacterController : MonoBehaviour
 
     public void Map()
     {
-        Debug.Log("Map"); //ACTIVATE MINIMAP
+        map.SetActive(true);
     }
 
     public void Marker()
     {
-        Debug.Log("Marker"); //SHOW YOUR LOCATION ON THE MINIMAP
+        _marker.SetActive(true);
     }
 
     public void Brighter()
@@ -96,7 +106,7 @@ public class CharacterController : MonoBehaviour
 
     public void BurnOut()
     {
-        if(lt != null && lt.Count > 2)
+        if (lt != null && lt.Count > 2)
         {
             int first = Random.Range(0, lt.Count);
             int second = Random.Range(0, lt.Count);
