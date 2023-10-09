@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &68413096746376740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5409858297950606981}
-  - component: {fileID: 8994545823068909448}
-  m_Layer: 0
-  m_Name: PlayerSpawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5409858297950606981
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68413096746376740}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.54, y: -1.28, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6949387533547522298}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8994545823068909448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68413096746376740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd2bf4d09ac040229a214100ceba3636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &444333000514425881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2072,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7482473274491225680}
-  - {fileID: 5409858297950606981}
   - {fileID: 5444869149812658433}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2151,10 +2106,35 @@ MonoBehaviour:
   DoorLength: 1
   DoorsList: []
   Socket: {fileID: 0}
-  SelectedMode: 0
+  SelectedMode: 2
   HybridDoorModeData:
     DefaultLength: 2
-    DoorLines: []
+    DoorLines:
+    - From: {x: -7, y: 3, z: 0}
+      To: {x: -5, y: 3, z: 0}
+      Length: 2
+      Direction: 0
+      Socket: {fileID: 0}
+    - From: {x: -1, y: 3, z: 0}
+      To: {x: 1, y: 3, z: 0}
+      Length: 2
+      Direction: 0
+      Socket: {fileID: 0}
+    - From: {x: 2, y: 2, z: 0}
+      To: {x: 2, y: -4, z: 0}
+      Length: 2
+      Direction: 0
+      Socket: {fileID: 0}
+    - From: {x: -7, y: -5, z: 0}
+      To: {x: 1, y: -5, z: 0}
+      Length: 2
+      Direction: 0
+      Socket: {fileID: 0}
+    - From: {x: -8, y: 2, z: 0}
+      To: {x: -8, y: -4, z: 0}
+      Length: 2
+      Direction: 0
+      Socket: {fileID: 0}
   ManualDoorModeData:
     DoorsList: []
   SimpleDoorModeData:
@@ -2187,7 +2167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5019584194661322588, guid: 155a472a743825f41a25476bae0de917, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5019584194661322588, guid: 155a472a743825f41a25476bae0de917, type: 3}
       propertyPath: m_LocalScale.x
