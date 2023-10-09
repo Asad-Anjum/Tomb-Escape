@@ -232,6 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8da61675586f43bc86896234ace78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lt: []
+  burnText: {fileID: 0}
   speed: 5
   rb: {fileID: 2906081343074245606}
   anim: {fileID: 5272375752121779367}
