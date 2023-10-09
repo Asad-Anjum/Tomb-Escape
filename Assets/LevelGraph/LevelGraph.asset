@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 256, y: 96}
-  Name: Room
+  Name: Enemy Room
   IndividualRoomTemplates: []
-  RoomTemplateSets: []
+  RoomTemplateSets:
+  - {fileID: 11400000, guid: 78cfc6089a602164a8d8999f6eb2cba7, type: 2}
 --- !u!114 &-4196949038914707540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,8 +293,8 @@ MonoBehaviour:
   - {fileID: 8289188956926748868}
   - {fileID: 7145620079220397707}
   EditorData:
-    PanOffset: {x: 720.87195, y: 357.7133}
-    Zoom: 0.6459834
+    PanOffset: {x: 125.10447, y: 169.8276}
+    Zoom: 1.356048
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
   IsDirected: 0

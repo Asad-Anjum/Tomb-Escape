@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class BossAttackScript : MonoBehaviour
@@ -15,9 +14,9 @@ public class BossAttackScript : MonoBehaviour
 
     private float duration;
     public float attackDuration = 0.2f;
-    private bool attacking = false;
+    private bool attacking;
 
-    public Transform playerTrans;
+    private Transform playerTrans;
     public float attackTriggerDistance = 1.5f;
     public AudioSource stabSFX;
     public AudioSource hitSFX;
@@ -25,10 +24,17 @@ public class BossAttackScript : MonoBehaviour
     public AudioSource warningSFX;
     public float warningSFXDistance = 7f;
     public float voicelineCooldown = 7f;
-    private float voicelineCDCountdown = 0f;
-    public bool playWarningSFX = false;
+    private float voicelineCDCountdown;
+    public bool playWarningSFX;
 
-    private bool alreadyHandledVoicelines = false;
+    private bool alreadyHandledVoicelines;
+
+
+    private void Start()
+    {
+        playerTrans = GameObject.Find("Player").transform;
+    }
+
     void Update()
     {
         if (duration >= attackDuration)
