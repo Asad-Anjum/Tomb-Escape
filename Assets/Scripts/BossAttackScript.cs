@@ -24,9 +24,8 @@ public class BossAttackScript : MonoBehaviour
     public AudioSource missedSFX;
     public AudioSource warningSFX;
     public float warningSFXDistance = 7f;
-    public float voicelineCooldown = 7f;
-
-    private float voicelineCDCountdown = 0f;
+    // public float voicelineCooldown = 7f;
+    // private float voicelineCDCountdown = 0f;
 
     // Update is called once per frame
     void Update()
@@ -37,10 +36,10 @@ public class BossAttackScript : MonoBehaviour
             duration = 0;
         }
 
-        if (voicelineCDCountdown <= 0 && Vector2.Distance(transform.position, playerTrans.position) <= warningSFXDistance) {
-            warningSFX.Play();
-            voicelineCDCountdown = voicelineCooldown;
-        }
+        // if (voicelineCDCountdown <= 0 && Vector2.Distance(transform.position, playerTrans.position) <= warningSFXDistance) {
+            // warningSFX.Play();
+            // voicelineCDCountdown = voicelineCooldown;
+        // }
 
         anim.SetBool("Attack", false);
         if (timeBtwAttack <= 0)
@@ -72,7 +71,7 @@ public class BossAttackScript : MonoBehaviour
             }
             duration -= Time.deltaTime;
         }
-        voicelineCDCountdown -= Time.deltaTime;
+        // voicelineCDCountdown -= Time.deltaTime;
     }
 
 
