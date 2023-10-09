@@ -26,28 +26,10 @@ namespace GameManager
         {
             // Start the generator coroutine
             _generator.Generate();
-            // _levelInfo = GameObject.Find("Generated Level").GetComponent<LevelInfoGrid2D>();
-            //
-            //
-            // // find the correct position to place the player
-            // List<RoomInstanceGrid2D> roomInstances = _levelInfo.RoomInstances;
-            //
-            //
-            // foreach (var room in roomInstances)
-            // {
-            //     GameObject roomInstance = room.RoomTemplateInstance;
-            //     if (roomInstance.name.Contains("Start"))
-            //     {
-            //         Debug.Log($"Find Start Room {roomInstance.name}");
-            //         if (roomInstance.transform.Find("PlayerSpawnPosition"))
-            //         {
-            //             Debug.Log(
-            //                 $"Find PlayerSpawnPosition {roomInstance.transform.Find("PlayerSpawnPosition").position}");
-            //         }
-            //
-            //         player.transform.position = roomInstance.transform.Find("PlayerSpawnPosition").position;
-            //     }
-            // }
+            
+            
+            // start calculation A*
+            
             yield break;
         }
     }

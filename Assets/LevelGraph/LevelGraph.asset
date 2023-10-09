@@ -47,8 +47,7 @@ MonoBehaviour:
   Position: {x: 256, y: 96}
   Name: Enemy Room
   IndividualRoomTemplates: []
-  RoomTemplateSets:
-  - {fileID: 11400000, guid: 78cfc6089a602164a8d8999f6eb2cba7, type: 2}
+  RoomTemplateSets: []
 --- !u!114 &-4196949038914707540
 MonoBehaviour:
   m_ObjectHideFlags: 0
