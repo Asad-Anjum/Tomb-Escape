@@ -28,9 +28,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 256, y: 0}
-  Name: Room
+  Name: Special Chest
   IndividualRoomTemplates: []
-  RoomTemplateSets: []
+  RoomTemplateSets:
+  - {fileID: 11400000, guid: 28285ebeef63a064b99776102318cac5, type: 2}
 --- !u!114 &-5242587330594260110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Position: {x: 256, y: 96}
-  Name: Basic Room
+  Name: Room
   IndividualRoomTemplates: []
   RoomTemplateSets: []
 --- !u!114 &-4196949038914707540
@@ -270,15 +271,10 @@ MonoBehaviour:
   - {fileID: 4592763371476522880, guid: 54c02cc7c0490cf42b2f06eddb455f5a, type: 3}
   - {fileID: 6100475222381175732, guid: 74212bc5dbc79444b8376e35b1f72de2, type: 3}
   CorridorRoomTemplateSets: []
-  DefaultIndividualRoomTemplates:
-  - {fileID: 6344563002007095720, guid: e79f3671fb6478a42acaa73d0358ce59, type: 3}
-  - {fileID: 6344563002007095720, guid: c0b0cb57f7a7df74d9113713aad7703c, type: 3}
-  - {fileID: 9220236716176498252, guid: 8e19ec63fdb02ae4fb619109bbe85cb2, type: 3}
-  - {fileID: 4933017584842437117, guid: 436d6c673dc161c4192872a7e9739e97, type: 3}
-  - {fileID: 520409652557903040, guid: 180a7faa6128017439479924ddb9f029, type: 3}
-  - {fileID: 6285836244922106877, guid: a9c8cf88683cbb24ca577de2d44fcbb9, type: 3}
-  - {fileID: 5707458839441005740, guid: d2c6c78dd0fd8a147a9a8306ad093311, type: 3}
-  DefaultRoomTemplateSets: []
+  DefaultIndividualRoomTemplates: []
+  DefaultRoomTemplateSets:
+  - {fileID: 11400000, guid: 5a3da711d303726479a264a4528be51a, type: 2}
+  - {fileID: 11400000, guid: 3d492dafbcb971c4c9bca458823409dc, type: 2}
   Rooms:
   - {fileID: -5242587330594260110}
   - {fileID: 4547236327045690233}
@@ -296,8 +292,8 @@ MonoBehaviour:
   - {fileID: 8289188956926748868}
   - {fileID: 7145620079220397707}
   EditorData:
-    PanOffset: {x: 69.78109, y: 149.11522}
-    Zoom: 1.2643498
+    PanOffset: {x: 720.87195, y: 357.7133}
+    Zoom: 0.6459834
   RoomType: Edgar.Unity.Room
   ConnectionType: Edgar.Unity.Connection
   IsDirected: 0
