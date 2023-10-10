@@ -28,10 +28,10 @@ public class GameController : MonoBehaviour
             int torchLayer = LayerMask.NameToLayer("Torch");
             for(int i = 0; i< obs.Length; i++)
             {
-                if((obs[i].layer == abilityLayer || obs[i].layer == enemyLayer))
-                {
-                    Destroy(obs[i]);
-                }
+                // if((obs[i].layer == abilityLayer || obs[i].layer == enemyLayer))
+                // {
+                //     Destroy(obs[i]);
+                // }
                 if(obs[i].tag == "Global Light")
                 {
                     obs[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 0;

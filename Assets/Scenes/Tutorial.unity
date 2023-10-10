@@ -346,6 +346,10 @@ PrefabInstance:
       value: indy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6328121654471492024, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328121654471492024, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
       propertyPath: m_SortingOrder
       value: 35
       objectReference: {fileID: 0}

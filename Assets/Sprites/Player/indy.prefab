@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2266170287387325835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.308, y: 0.803, z: 0}
+  m_LocalPosition: {x: -0.33, y: 1.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1
   attackPos: {fileID: 2008406980369675248}
-  RangeX: 0.09
-  RangeY: 0.88
+  RangeX: 0.41
+  RangeY: 2.68
   enemies:
     serializedVersion: 2
     m_Bits: 128
@@ -243,6 +243,7 @@ MonoBehaviour:
   map: {fileID: 0}
   hasMap: 0
   trapPrefab: {fileID: 916136274250815541, guid: b3c749555f21d6f47a70bca3725a8f98, type: 3}
+  dropPoint: {fileID: 0}
 --- !u!1 &4992882206819409115
 GameObject:
   m_ObjectHideFlags: 0
