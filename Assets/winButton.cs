@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class winButton : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class winButton : MonoBehaviour
     {
         if(col.tag == "Player" && gc.escaping)
         {
-            Debug.Log("You Win");// add some win state
+            SceneManager.LoadScene("Win");
         }
     }
 }

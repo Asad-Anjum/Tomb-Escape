@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Diagnostics;
 using Edgar.Unity;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
@@ -23,7 +23,7 @@ namespace GameManager
         void LoadLevel()
         {
             // Show loading screen
-            ShowLoadingScreen("Dungeon", "loading..");
+            ShowLoadingScreen("Dungeon", "loading...");
             StartCoroutine(GenerateLevel());
         }
 
@@ -95,8 +95,10 @@ namespace GameManager
             var canvas = loadingCanvas;
             canvas.SetActive(true);
             var loadingImage = canvas.transform.Find("LoadingImage")?.gameObject;
-            var primaryTextComponent = loadingImage?.transform.Find("PrimaryText")?.gameObject.GetComponent<Text>();
-            var secondaryTextComponent = loadingImage?.transform.Find("SecondaryText")?.gameObject.GetComponent<Text>();
+            var primaryTextComponent =
+                loadingImage?.transform.Find("PrimaryText")?.gameObject.GetComponent<TextMeshProUGUI>();
+            var secondaryTextComponent = loadingImage?.transform.Find("SecondaryText")?.gameObject
+                .GetComponent<TextMeshProUGUI>();
 
             if (loadingImage != null)
             {
