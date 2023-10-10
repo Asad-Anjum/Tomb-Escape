@@ -6,6 +6,7 @@ public class EnemySpawnTrigger : MonoBehaviour
 {
     public GameObject[] EnemiesToSpawn;
     bool done = false;
+    public int enemies;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player" && !done)
@@ -16,6 +17,7 @@ public class EnemySpawnTrigger : MonoBehaviour
                 EnemiesToSpawn[i].SetActive(true);
                 EnemiesToSpawn[i].transform.parent = null;
                 done = true;
+                CharacterController.Instance.enemiesActivated = true;
             }
         }
 

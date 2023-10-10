@@ -97,6 +97,7 @@ public class BossAttackScript : MonoBehaviour
                 alreadyHandledVoicelines = true;
             }
             duration -= Time.deltaTime;
+            attacking = false;
         }
         voicelineCDCountdown -= Time.deltaTime;
     }
@@ -112,7 +113,7 @@ public class BossAttackScript : MonoBehaviour
         {
             if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="enemy")
             {
-                CharacterController.Instance.TakeDamage();//add stuff
+                CharacterController.Instance.TakeDamage();
                 hitPlayer = true;
             }
             else if(enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="Chaser")
