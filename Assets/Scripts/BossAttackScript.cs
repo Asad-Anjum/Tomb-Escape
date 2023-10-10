@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using Pathfinding;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class BossAttackScript : MonoBehaviour
 {
@@ -88,14 +90,6 @@ public class BossAttackScript : MonoBehaviour
         {
             hitPlayer = false;
             StartCoroutine(Attack());
-            if (!alreadyHandledVoicelines) {
-                if (hitPlayer) {
-                    hitSFX.Play();
-                } else {
-                    missedSFX.Play();
-                }
-                alreadyHandledVoicelines = true;
-            }
             duration -= Time.deltaTime;
             attacking = false;
         }
@@ -107,8 +101,8 @@ public class BossAttackScript : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
 
-        
 
+        hitPlayer = false;
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="enemy")
@@ -119,6 +113,8 @@ public class BossAttackScript : MonoBehaviour
             else if(enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="Chaser")
             {
                 Debug.Log("GAME OVER");//Add game over screen
+                hitPlayer = true;
+                SceneManager.LoadScene("Lose");
             }
         }
         yield break;
