@@ -38,6 +38,8 @@ public class BossAttackScript : MonoBehaviour
     public float trapDuration = 4f;
     private float defaultSpeed;
 
+    public float slowDownAtStartDuration = 4f;
+
     private bool alreadyHandledVoicelines;
 
     private void Start()
@@ -46,6 +48,7 @@ public class BossAttackScript : MonoBehaviour
         gameObject.GetComponent<AIDestinationSetter>().target = playerTrans;
 
         defaultSpeed = gameObject.GetComponent<AIPath>().maxSpeed;
+        HandleSlowdownAtStart();
     }
 
     void Update()
@@ -120,6 +123,13 @@ public class BossAttackScript : MonoBehaviour
         StartCoroutine(EnrageCouroutine(enragedDuration));
     }
 
+    public void HandleSlowdownAtStart()
+    {
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed * 0.05f;
+        StartCoroutine(SlowdownAtStartCouroutine(slowDownAtStartDuration));
+    }
+
+
     private IEnumerator TrapCouroutine(float duration, GameObject trap)
     {
         yield return new WaitForSeconds(duration);
@@ -128,6 +138,12 @@ public class BossAttackScript : MonoBehaviour
     }
 
     private IEnumerator EnrageCouroutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed;
+    }
+
+    private IEnumerator SlowdownAtStartCouroutine(float duration)
     {
         yield return new WaitForSeconds(duration);
         gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed;
