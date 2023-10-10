@@ -15,16 +15,16 @@ public class passwordSequence : MonoBehaviour
     public Transform specialChest;
     public Transform dropLocation1;
     public Transform dropLocation2;
-    private int finished = 0;
+    public int finished = 0;
+    public bool exited = false;
 
     
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.tag == "Player") 
+        if(col.tag == "Player" && !exited) 
         {
             StartCoroutine(Sequence1());
-            seq1 = true;
             this.GetComponent<Collider2D>().enabled = false;
         }
     }
@@ -38,6 +38,7 @@ public class passwordSequence : MonoBehaviour
             this.transform.GetChild(current).GetComponent<passTorch>().Light();
             yield return new WaitForSeconds(1f);
         }
+        seq1 = true;
         yield break;
     }
     
@@ -52,6 +53,7 @@ public class passwordSequence : MonoBehaviour
             this.transform.GetChild(current).GetComponent<passTorch>().Light();
             yield return new WaitForSeconds(1f);
         }
+        seq2 = true;
         yield break;
     }
 
@@ -66,6 +68,7 @@ public class passwordSequence : MonoBehaviour
             this.transform.GetChild(current).GetComponent<passTorch>().Light();
             yield return new WaitForSeconds(1f);
         }
+        seq3 = true;
         yield break;
     }
     
@@ -85,14 +88,16 @@ public class passwordSequence : MonoBehaviour
             {
                 InventoryManager.Instance.Add(enrage.GetComponent<ItemController>().Item);
                 var obj = Instantiate(enrage, dropLocation1);
+                obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 obj.parent = null;
-                Destroy(gameObject);
+                seq1 = false;
+                exited = true;
+                // Destroy(gameObject);
             }
                 
             
             if(check > 2) {
                 seq1 = false;
-                seq2 = true;
                 finished++;
                 check = 0;
                 StartCoroutine(Sequence2());
@@ -110,14 +115,16 @@ public class passwordSequence : MonoBehaviour
             else
             {
                 var obj = Instantiate(chest, dropLocation1);
+                obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 obj.parent = null;
-                Destroy(gameObject);
+                seq2 = false;
+                exited = true;
+                // Destroy(gameObject);
             }
                 
             
             if(check > 3) {
                 seq2 = false;
-                seq3 = true;
                 finished++;
                 check = 0;
                 StartCoroutine(Sequence3());
@@ -134,9 +141,12 @@ public class passwordSequence : MonoBehaviour
             }
             else
             {
+                seq3 = false;
                 var obj = Instantiate(specialChest, dropLocation1);
+                obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 obj.parent = null;
-                Destroy(gameObject);
+                exited = true;
+                // Destroy(gameObject);
             }
                 
             
@@ -144,10 +154,13 @@ public class passwordSequence : MonoBehaviour
                 seq3 = false;
                 finished++;
                 var obj = Instantiate(chest, dropLocation1);
+                obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 obj.parent = null;
                 var obj2 = Instantiate(specialChest, dropLocation2);
+                obj2.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 obj2.parent = null;
-                Destroy(gameObject);
+                exited = true;
+                // Destroy(gameObject);
             }
         }
     }

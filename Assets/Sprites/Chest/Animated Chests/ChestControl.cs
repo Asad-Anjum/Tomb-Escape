@@ -31,6 +31,7 @@ public class ChestControl : MonoBehaviour
         Transform item = loot.GetRandom();
         
         var obj = Instantiate(item, location);
+        obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
         
         if(obj.gameObject.tag != "Burn")
             InventoryManager.Instance.Add(item.GetComponent<ItemController>().Item);
@@ -38,8 +39,8 @@ public class ChestControl : MonoBehaviour
             CharacterController.Instance.burns++;
 
         yield break;
-        // yield return new  WaitForSeconds(1.5f);
-        // Destroy(obj.gameObject);
+        yield return new  WaitForSeconds(1.5f);
+        Destroy(obj.gameObject);
 
     }
 }
