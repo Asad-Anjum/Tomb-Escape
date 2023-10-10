@@ -4,6 +4,7 @@ using Pathfinding;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
 public class BossAttackScript : MonoBehaviour
 {
     private float timeBtwAttack;
@@ -63,9 +64,7 @@ public class BossAttackScript : MonoBehaviour
             duration = 0;
         }
 
-        if (voicelineCDCountdown <= 0 &&
-            Vector2.Distance(transform.position, playerTrans.position) <= warningSFXDistance && playWarningSFX)
-        {
+        if (voicelineCDCountdown <= 0 && Vector2.Distance(transform.position, playerTrans.position) <= warningSFXDistance && playWarningSFX) {
             warningSFX.Play();
             voicelineCDCountdown = voicelineCooldown;
         }
@@ -91,47 +90,38 @@ public class BossAttackScript : MonoBehaviour
         {
             hitPlayer = false;
             StartCoroutine(Attack());
-            if (!alreadyHandledVoicelines)
-            {
-                if (hitPlayer)
-                {
-                    hitSFX.Play();
-                }
-                else
-                {
-                    missedSFX.Play();
-                }
-
-                alreadyHandledVoicelines = true;
-            }
-
             duration -= Time.deltaTime;
             attacking = false;
         }
-
         voicelineCDCountdown -= Time.deltaTime;
     }
 
     private IEnumerator Attack()
     {
         yield return new WaitForSeconds(0.4f);
-        Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY),
-            transform.eulerAngles.z, enemies);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
 
 
+        hitPlayer = false;
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag == "enemy")
+            if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="enemy")
             {
                 CharacterController.Instance.TakeDamage();
                 hitPlayer = true;
             }
-            else if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag == "Chaser")
+            else if(enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="Chaser")
             {
+                Debug.Log("GAME OVER");//Add game over screen
+                hitPlayer = true;
                 SceneManager.LoadScene("Lose");
             }
         }
+        yield break;
+
     }
+
+
 
 
     public void HandleTrap(GameObject trap)
@@ -186,6 +176,7 @@ public class BossAttackScript : MonoBehaviour
             Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<CircleCollider2D>());
         }
     }
+
 
 
     void OnDrawGizmosSelected()
