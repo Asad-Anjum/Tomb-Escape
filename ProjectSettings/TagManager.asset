@@ -19,7 +19,8 @@ TagManager:
   - Button3
   - Button4
   - Button5
-  - Trap
+  - Explore Tutorial
+  - Escape Tutorial
   layers:
   - Default
   - TransparentFX
