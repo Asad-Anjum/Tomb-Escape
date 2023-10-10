@@ -2,6 +2,7 @@
 using Edgar.Unity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -53,6 +54,7 @@ namespace GameManager
 
             if (success)
             {
+                // GameObject.Find("Golbal Light").GetComponent<Light2D>();
                 // change layername of walls... Why does this have to be a pain?
                 GameObject generatedLevel = GameObject.Find("Generated Level");
                 GameObject wallsGameObject =
