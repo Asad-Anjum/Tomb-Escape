@@ -240,6 +240,9 @@ MonoBehaviour:
   anim: {fileID: 5272375752121779367}
   gc: {fileID: 0}
   burns: 1
+  map: {fileID: 0}
+  hasMap: 0
+  trapPrefab: {fileID: 916136274250815541, guid: b3c749555f21d6f47a70bca3725a8f98, type: 3}
 --- !u!1 &4992882206819409115
 GameObject:
   m_ObjectHideFlags: 0

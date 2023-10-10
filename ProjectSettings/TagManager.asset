@@ -19,6 +19,7 @@ TagManager:
   - Button3
   - Button4
   - Button5
+  - Trap
   layers:
   - Default
   - TransparentFX

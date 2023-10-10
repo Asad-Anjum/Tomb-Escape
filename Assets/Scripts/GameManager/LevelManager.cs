@@ -26,10 +26,17 @@ namespace GameManager
         {
             // Start the generator coroutine
             _generator.Generate();
-            
-            
-            // start calculation A*
-            
+
+            // change layername of walls... Why does this have to be a pain?
+            GameObject generatedLevel = GameObject.Find("Generated Level");
+            GameObject wallsGameObject = generatedLevel.transform.Find("Tilemaps").transform.Find("Walls").gameObject;
+            wallsGameObject.layer = LayerMask.NameToLayer("Walls");
+            Debug.Log("walls layer applied");
+
+            // start calculation A* WHY IS IT NOT SCANNING>??????
+            //AstarPath.active.Scan();
+            //Debug.Log("scanned...");
+
             yield break;
         }
     }
