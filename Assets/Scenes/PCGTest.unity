@@ -484,85 +484,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4845002041082278405, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
   m_PrefabInstance: {fileID: 142409332}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &295803719
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 295803720}
-  - component: {fileID: 295803721}
-  m_Layer: 0
-  m_Name: Dungeon Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &295803720
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295803719}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000061035156, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &295803721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295803719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11725bdbb93631241b38951f78cae60c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 3
-  EnableDiagnostics: 0
-  InputType: 0
-  CustomInputTask: {fileID: 0}
-  FixedLevelGraphConfig:
-    LevelGraph: {fileID: 11400000, guid: 40061d9269225c14094db3a0cc16358b, type: 2}
-    UseCorridors: 1
-  GeneratorConfig:
-    RootGameObject: {fileID: 0}
-    Timeout: 10000
-    RepeatModeOverride: 2
-    MinimumRoomDistance: 3
-  PostProcessConfig:
-    InitializeSharedTilemaps: 1
-    TilemapLayersStructure: 0
-    TilemapLayersHandler: {fileID: 0}
-    TilemapLayersExample: {fileID: 0}
-    TilemapMaterial: {fileID: 0}
-    CopyTilesToSharedTilemaps: 1
-    CenterGrid: 1
-    DisableRoomTemplatesRenderers: 1
-    DisableRoomTemplatesColliders: 1
-  CustomPostProcessTasks:
-  - {fileID: 11400000, guid: bce5b1c3189237b4b8b1c44a7bd105e1, type: 2}
-  OtherConfig:
-    UseRandomSeed: 1
-    RandomGeneratorSeed: 0
-    GenerateOnStart: 1
-  AdvancedConfig:
-    ThrowExceptionsImmediately: 0
-  UseRandomSeed: 1
-  RandomGeneratorSeed: 0
-  GenerateOnStart: 1
-  ThrowExceptionsImmediately: 0
-  DisableCustomPostProcessing: 0
 --- !u!1 &398356672
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050990051}
   - component: {fileID: 1050990052}
+  - component: {fileID: 1050990053}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -926,7 +848,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1050990052
 MonoBehaviour:
@@ -941,6 +863,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingCanvas: {fileID: 703815630}
+--- !u!114 &1050990053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050990050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11725bdbb93631241b38951f78cae60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 3
+  EnableDiagnostics: 0
+  InputType: 0
+  CustomInputTask: {fileID: 0}
+  FixedLevelGraphConfig:
+    LevelGraph: {fileID: 11400000, guid: 40061d9269225c14094db3a0cc16358b, type: 2}
+    UseCorridors: 1
+  GeneratorConfig:
+    RootGameObject: {fileID: 0}
+    Timeout: 10000
+    RepeatModeOverride: 2
+    MinimumRoomDistance: 3
+  PostProcessConfig:
+    InitializeSharedTilemaps: 1
+    TilemapLayersStructure: 0
+    TilemapLayersHandler: {fileID: 0}
+    TilemapLayersExample: {fileID: 0}
+    TilemapMaterial: {fileID: 0}
+    CopyTilesToSharedTilemaps: 1
+    CenterGrid: 1
+    DisableRoomTemplatesRenderers: 1
+    DisableRoomTemplatesColliders: 1
+  CustomPostProcessTasks:
+  - {fileID: 11400000, guid: bce5b1c3189237b4b8b1c44a7bd105e1, type: 2}
+  OtherConfig:
+    UseRandomSeed: 1
+    RandomGeneratorSeed: 0
+    GenerateOnStart: 1
+  AdvancedConfig:
+    ThrowExceptionsImmediately: 0
+  UseRandomSeed: 1
+  RandomGeneratorSeed: 0
+  GenerateOnStart: 1
+  ThrowExceptionsImmediately: 0
+  DisableCustomPostProcessing: 0
 --- !u!1 &1070738055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1033,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831124503
 GameObject:
@@ -1094,7 +1063,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831124503}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &1831124505
 Camera:
   m_ObjectHideFlags: 0

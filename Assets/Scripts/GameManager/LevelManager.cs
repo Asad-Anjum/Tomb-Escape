@@ -13,10 +13,6 @@ namespace GameManager
         private DungeonGeneratorGrid2D _generator;
         private LevelInfoGrid2D _levelInfo;
 
-        private void Awake()
-        {
-            _generator = GameObject.Find("Dungeon Generator").GetComponent<DungeonGeneratorGrid2D>();
-        }
 
         private void Start()
         {
@@ -35,7 +31,7 @@ namespace GameManager
         private IEnumerator GenerateLevel()
         {
             yield return new WaitForSeconds(0.1f);
-
+            _generator = transform.GetComponent<DungeonGeneratorGrid2D>();
             bool success = true;
             try
             {
