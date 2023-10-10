@@ -23,6 +23,7 @@ TagManager:
   - Explore Tutorial
   - Escape Tutorial
   - Trap
+  - Chest
   layers:
   - Default
   - TransparentFX
