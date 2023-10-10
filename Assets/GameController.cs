@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     private GameObject[] obs;
     public int burns;
 
+    public AudioSource normalTheme;
+
 
 
     void Start()
@@ -26,6 +28,7 @@ public class GameController : MonoBehaviour
             int abilityLayer = LayerMask.NameToLayer("Abilities");
             int enemyLayer = LayerMask.NameToLayer("Enemy");
             int torchLayer = LayerMask.NameToLayer("Torch");
+            normalTheme.Stop();
             for(int i = 0; i< obs.Length; i++)
             {
                 // if((obs[i].layer == abilityLayer || obs[i].layer == enemyLayer))
