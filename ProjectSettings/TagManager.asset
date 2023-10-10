@@ -22,6 +22,7 @@ TagManager:
   - Tag
   - Explore Tutorial
   - Escape Tutorial
+  - Trap
   layers:
   - Default
   - TransparentFX
