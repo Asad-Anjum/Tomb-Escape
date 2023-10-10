@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 4187657172997384931}
   m_Layer: 7
   m_Name: tinyevil
-  m_TagString: Chaser
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,8 +275,9 @@ MonoBehaviour:
   enragedSpeedMultiplier: 1.15
   enragedDuration: 5
   trapSpeedMultiplier: 0.05
-  HP: 100
+  HP: 1
   trapDuration: 2
+  slowDownAtStartDuration: 4
 --- !u!82 &6725340615563990447
 AudioSource:
   m_ObjectHideFlags: 0
@@ -284,7 +285,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 244bff9acd4d9db4885cc5b21fafa1c2, type: 3}
@@ -380,7 +381,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 068a9f696130d134fb2b4a8ed8347638, type: 3}
@@ -476,7 +477,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f73e07f97fef15a49b3668dae3361687, type: 3}
@@ -572,7 +573,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1ffc3df6b3a02cd4c9089237f2520367, type: 3}
@@ -668,7 +669,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0aca5edb10309c04f8a27df9d41ac1ee, type: 3}
@@ -764,7 +765,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ac5182a4870d8094d95552b56929d430, type: 3}
@@ -860,7 +861,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6725340615563990433}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 93c0ceeefb0a3e3419bef0a9ffefea59, type: 3}

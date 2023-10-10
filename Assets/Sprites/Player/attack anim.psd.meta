@@ -20,12 +20,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -64,7 +63,6 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -77,7 +75,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -90,7 +87,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -103,7 +99,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -116,7 +111,6 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -129,9 +123,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 32
-        height: 64
+        height: 128
       alignment: 9
-      pivot: {x: 0.4802372, y: 0.19038212}
+      pivot: {x: 0.48661327, y: 0.0933735}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,9 +144,9 @@ TextureImporter:
         x: 32
         y: 0
         width: 32
-        height: 64
+        height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.1903821}
+      pivot: {x: 0.476573, y: 0.09421018}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,9 +165,9 @@ TextureImporter:
         x: 64
         y: 0
         width: 32
-        height: 64
+        height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.1903821}
+      pivot: {x: 0.4866135, y: 0.095046856}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,9 +186,9 @@ TextureImporter:
         x: 96
         y: 0
         width: 32
-        height: 64
+        height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.1903821}
+      pivot: {x: 0.47322655, y: 0.09588354}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,9 +207,9 @@ TextureImporter:
         x: 128
         y: 0
         width: 32
-        height: 64
+        height: 128
       alignment: 9
-      pivot: {x: 0.5, y: 0.1903821}
+      pivot: {x: 0.47657347, y: 0.0975569}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,8 +237,9 @@ TextureImporter:
       attack anim_2: -1902368446
       attack anim_3: 725474974
       attack anim_4: 1998088942
-  mipmapLimitGroupName: 
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

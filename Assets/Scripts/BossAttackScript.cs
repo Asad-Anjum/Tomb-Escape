@@ -34,13 +34,15 @@ public class BossAttackScript : MonoBehaviour
     public float enragedSpeedMultiplier = 1.15f;
     public float enragedDuration = 5f;
     public float trapSpeedMultiplier = 0.15f;
-    public float HP = 100f;
+    public float HP;
     public float trapDuration = 4f;
     private float defaultSpeed;
 
     public float slowDownAtStartDuration = 4f;
 
     private bool alreadyHandledVoicelines;
+
+    bool hitPlayer;
 
     private void Start()
     {
@@ -84,20 +86,8 @@ public class BossAttackScript : MonoBehaviour
         // Debug.Log(transform.eulerAngles.z);
         if (attacking)
         {
-            Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
-
-            bool hitPlayer = false;
-
-            for (int i = 0; i < enemiesToDamage.Length; i++)
-            {
-                if (enemiesToDamage[i].gameObject.tag == "Player")
-                {
-                    // WHAT should happen to player?;
-                    //Debug.Log("ENEMY HIT PLAYER!!!");
-                    hitPlayer = true;
-                }
-            }
-
+            hitPlayer = false;
+            StartCoroutine(Attack());
             if (!alreadyHandledVoicelines) {
                 if (hitPlayer) {
                     hitSFX.Play();
@@ -110,6 +100,32 @@ public class BossAttackScript : MonoBehaviour
         }
         voicelineCDCountdown -= Time.deltaTime;
     }
+
+    private IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.4f);
+        Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
+
+        
+
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            if (enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="enemy")
+            {
+                CharacterController.Instance.TakeDamage();//add stuff
+                hitPlayer = true;
+            }
+            else if(enemiesToDamage[i].gameObject.tag == "Player" && this.tag =="Chaser")
+            {
+                Debug.Log("GAME OVER");//Add game over screen
+            }
+        }
+        yield break;
+
+    }
+
+
+
 
     public void HandleTrap(GameObject trap)
     {
@@ -164,16 +180,7 @@ public class BossAttackScript : MonoBehaviour
         }
     }
 
-    public void HandleDamage(float damageHP)
-    {
-        painSFX.Play();
-        HP -= damageHP;
-        if (HP <= 0)
-        {
-            gameObject.GetComponent<AIPath>().maxSpeed = 0.0f;
-            Destroy(gameObject, 1);
-        }
-    }
+
 
     void OnDrawGizmosSelected()
     {

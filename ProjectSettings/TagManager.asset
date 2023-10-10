@@ -24,6 +24,7 @@ TagManager:
   - Escape Tutorial
   - Trap
   - Chest
+  - enemy
   layers:
   - Default
   - TransparentFX

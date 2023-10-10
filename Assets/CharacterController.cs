@@ -28,6 +28,9 @@ public class CharacterController : MonoBehaviour
 
     public GameObject trapPrefab;
 
+    private int hit = 0; //SET TO 0 ONCE ALL ENEMIES DEAD
+    public Transform dropPoint;
+
     private void Awake()
     {
         Instance = this;
@@ -70,6 +73,31 @@ public class CharacterController : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
         transform.up = direction;
+    }
+
+    public void TakeDamage()
+    {
+        StartCoroutine(Hit());
+    }
+
+    private IEnumerator Hit()
+    {
+        //hit++;
+        Color tmp = this.GetComponent<SpriteRenderer>().color;
+        tmp.a = 0f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+        yield return new WaitForSeconds(0.1f);
+        tmp.a = 255f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+        yield return new WaitForSeconds(0.1f);
+        tmp.a = 0f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+        yield return new WaitForSeconds(0.1f);
+        tmp.a = 255f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+        yield return new WaitForSeconds(0.1f);
+
+        yield break;
     }
 
     void OnTriggerEnter2D(Collider2D col)
