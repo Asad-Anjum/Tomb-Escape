@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Pathfinding;
+using System.Collections;
 
 public class BossAttackScript : MonoBehaviour
 {
@@ -23,10 +24,18 @@ public class BossAttackScript : MonoBehaviour
     public AudioSource hitSFX;
     public AudioSource missedSFX;
     public AudioSource warningSFX;
+    public AudioSource trapSFX;
+    public AudioSource painSFX;
     public float warningSFXDistance = 7f;
     public float voicelineCooldown = 7f;
     private float voicelineCDCountdown;
     public bool playWarningSFX;
+
+    public float enragedSpeedMultiplier = 1.15f;
+    public float enragedDuration = 5f;
+    public float trapSpeedMultiplier = 0.15f;
+    public float trapDuration = 4f;
+    private float defaultSpeed;
 
     private bool alreadyHandledVoicelines;
 
@@ -35,6 +44,8 @@ public class BossAttackScript : MonoBehaviour
     {
         playerTrans = GameObject.Find("Player").transform;
         gameObject.GetComponent<AIDestinationSetter>().target = playerTrans;
+
+        defaultSpeed = gameObject.GetComponent<AIPath>().maxSpeed;
     }
 
     void Update()
@@ -79,7 +90,7 @@ public class BossAttackScript : MonoBehaviour
                 if (enemiesToDamage[i].gameObject.tag == "Player")
                 {
                     // WHAT should happen to player?;
-                    Debug.Log("ENEMY HIT PLAYER!!!");
+                    //Debug.Log("ENEMY HIT PLAYER!!!");
                     hitPlayer = true;
                 }
             }
@@ -97,7 +108,40 @@ public class BossAttackScript : MonoBehaviour
         voicelineCDCountdown -= Time.deltaTime;
     }
 
+    public void HandleTrap(GameObject trap)
+    {
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed * trapSpeedMultiplier;
+        StartCoroutine(TrapCouroutine(trapDuration, trap));
+    }
 
+    public void HandleEnrange()
+    {
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed * enragedSpeedMultiplier;
+        StartCoroutine(EnrageCouroutine(enragedDuration));
+    }
+
+    private IEnumerator TrapCouroutine(float duration, GameObject trap)
+    {
+        yield return new WaitForSeconds(duration);
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed;
+        Destroy(trap);
+    }
+
+    private IEnumerator EnrageCouroutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        gameObject.GetComponent<AIPath>().maxSpeed = defaultSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Trap")
+        {
+            trapSFX.Play();
+            painSFX.Play();
+            HandleTrap(collision.gameObject);
+        }
+    }
 
     void OnDrawGizmosSelected()
     {

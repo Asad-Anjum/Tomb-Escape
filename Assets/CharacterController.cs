@@ -26,6 +26,8 @@ public class CharacterController : MonoBehaviour
     private bool mapScanned;
     public bool hasMap = false;
 
+    public GameObject trapPrefab;
+
     private void Awake()
     {
         Instance = this;
@@ -92,12 +94,18 @@ public class CharacterController : MonoBehaviour
 
     public void Enrage()
     {
-        Debug.Log("enrage"); // CHANGE ENEMY SPEED WITH THIS
+        Debug.Log("Trap");
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Chaser"))
+        {
+            enemy.GetComponent<BossAttackScript>().HandleEnrange();
+        }
     }
 
     public void Trap()
     {
         Debug.Log("Trap"); // STOP ENEMY FOR 2 SECONDS WHEN HE STEPS ON THIS
+        GameObject trap = Instantiate(trapPrefab, transform.position, Quaternion.identity);
+        Physics.IgnoreCollision(trap.transform.GetComponent<Collider>(), GetComponent<Collider>());
     }
 
     public void Map()

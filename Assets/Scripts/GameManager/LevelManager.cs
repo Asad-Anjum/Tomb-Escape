@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Edgar.Unity;
 using UnityEngine;
-using Pathfinding;
 
 namespace GameManager
 {
@@ -35,8 +34,8 @@ namespace GameManager
             Debug.Log("walls layer applied");
 
             // start calculation A* WHY IS IT NOT SCANNING>??????
-            AstarPath.active.Scan();
-            Debug.Log("scanned...");
+            //AstarPath.active.Scan();
+            //Debug.Log("scanned...");
 
             yield break;
         }

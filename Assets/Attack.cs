@@ -44,7 +44,7 @@ public class Attack : MonoBehaviour
             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
             {
-                if(enemiesToDamage[i].gameObject.tag == "Enemy")
+                if(enemiesToDamage[i].gameObject.tag == "Chaser")
                     Destroy(enemiesToDamage[i].gameObject);
             }
             duration -= Time.deltaTime;
