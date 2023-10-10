@@ -42,16 +42,6 @@ public class Attack : MonoBehaviour
         if(attacking)
         {
             StartCoroutine(Hitting());
-            // Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(RangeX, RangeY), transform.eulerAngles.z, enemies);
-            // for(int i = 0; i < enemiesToDamage.Length; i++)
-            // {
-            //     if (enemiesToDamage[i].gameObject.tag == "enemy")
-            //     {
-            //         Destroy(enemiesToDamage[i].gameObject);
-            //         StartCoroutine(Hitting());
-            //     }
-            //         // enemiesToDamage[i].gameObject.GetComponent<BossAttackScript>().HandleDamage(1f);
-            // }
             duration -= Time.deltaTime;
             attacking = false;
         }
@@ -65,8 +55,7 @@ public class Attack : MonoBehaviour
             {
                 if (enemiesToDamage[i].gameObject.tag == "enemy")
                 {
-                    Destroy(enemiesToDamage[i].gameObject);
-                    StartCoroutine(Hitting());                    
+                    Destroy(enemiesToDamage[i].gameObject);                  
                 }
 
                     // enemiesToDamage[i].gameObject.GetComponent<BossAttackScript>().HandleDamage(1f);

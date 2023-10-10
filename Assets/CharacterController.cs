@@ -28,8 +28,13 @@ public class CharacterController : MonoBehaviour
 
     public GameObject trapPrefab;
 
-    private int hit = 0; //SET TO 0 ONCE ALL ENEMIES DEAD
+    private int hit = 0;
     public Transform dropPoint;
+    public Transform chest;
+    public Transform specialChest;
+    public Transform enrage;
+
+    public bool enemiesActivated = false;
 
     private void Awake()
     {
@@ -46,6 +51,21 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
+        if(enemiesActivated)
+        {
+            GameObject[] gos =GameObject.FindGameObjectsWithTag("enemy");
+            if(gos.Length <= 0)
+            {
+                Reward();
+                hit = 0;
+                enemiesActivated = false;
+            }
+        }
+
+
+
+
+
         burnText.text = "Burns: " + burns.ToString();
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -82,7 +102,7 @@ public class CharacterController : MonoBehaviour
 
     private IEnumerator Hit()
     {
-        //hit++;
+        hit++;
         Color tmp = this.GetComponent<SpriteRenderer>().color;
         tmp.a = 0f;
         this.GetComponent<SpriteRenderer>().color = tmp;
@@ -108,6 +128,31 @@ public class CharacterController : MonoBehaviour
             gc.escaping = true;
             Destroy(col.gameObject);
         }
+    }
+
+
+    void Reward()
+    {
+        if (hit == 0)
+        {
+            var obj = Instantiate(specialChest, dropPoint.position, Quaternion.identity);
+            obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+            obj.parent = null;
+        }
+        else if (hit == 1)
+        {
+            var obj = Instantiate(chest, dropPoint.position, Quaternion.identity);
+            obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+            obj.parent = null;
+        }
+        else
+        {
+            InventoryManager.Instance.Add(enrage.GetComponent<ItemController>().Item);
+            var obj = Instantiate(enrage, dropPoint.position, Quaternion.identity);
+            obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
+            obj.parent = null;
+        }
+            
     }
 
     public void FastForward()
