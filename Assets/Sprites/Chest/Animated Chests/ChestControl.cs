@@ -8,7 +8,12 @@ public class ChestControl : MonoBehaviour
     public Animator anim;
     public WeightedRandomList<Transform> loot;
 
-    public Transform location;
+    private Transform location;
+
+    void Start()
+    {
+        location = this.gameObject.transform.GetChild(0);
+    }
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -24,6 +29,7 @@ public class ChestControl : MonoBehaviour
     {
         yield return new  WaitForSeconds(0.3f);
         Transform item = loot.GetRandom();
+        
         var obj = Instantiate(item, location);
         
         if(obj.gameObject.tag != "Burn")
@@ -31,9 +37,9 @@ public class ChestControl : MonoBehaviour
         else
             CharacterController.Instance.burns++;
 
-        
-        yield return new  WaitForSeconds(1.5f);
-        Destroy(obj.gameObject);
+        yield break;
+        // yield return new  WaitForSeconds(1.5f);
+        // Destroy(obj.gameObject);
 
     }
 }

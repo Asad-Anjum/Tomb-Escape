@@ -24,6 +24,7 @@ public class CharacterController : MonoBehaviour
     private GameObject _marker;
 
     private bool mapScanned;
+    public bool hasMap = false;
 
     private void Awake()
     {
@@ -40,7 +41,6 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(speed);
         burnText.text = "Burns: " + burns.ToString();
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -103,6 +103,7 @@ public class CharacterController : MonoBehaviour
     public void Map()
     {
         map.SetActive(true);
+        hasMap = true;
     }
 
     public void Marker()

@@ -182,7 +182,8 @@ MonoBehaviour:
       weight: 5
     - item: {fileID: 2324580476080528359, guid: 69ba5052c4cfb2041a72b3103d08121f, type: 3}
       weight: 3
-  location: {fileID: 6846985610879802003}
+    - item: {fileID: 6960593114981983604, guid: 09e597c3af80f7048bfd734a1911888e, type: 3}
+      weight: 3
 --- !u!61 &6846985610920613528
 BoxCollider2D:
   m_ObjectHideFlags: 0
