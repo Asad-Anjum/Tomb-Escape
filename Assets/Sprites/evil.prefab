@@ -629,6 +629,7 @@ MonoBehaviour:
   enragedSpeedMultiplier: 1.15
   enragedDuration: 5
   trapSpeedMultiplier: 0.05
+  HP: 10000
   trapDuration: 2
 --- !u!82 &5702305826066378659
 AudioSource:

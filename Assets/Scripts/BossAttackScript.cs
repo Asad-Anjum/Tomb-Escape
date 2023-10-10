@@ -34,11 +34,11 @@ public class BossAttackScript : MonoBehaviour
     public float enragedSpeedMultiplier = 1.15f;
     public float enragedDuration = 5f;
     public float trapSpeedMultiplier = 0.15f;
+    public float HP = 100f;
     public float trapDuration = 4f;
     private float defaultSpeed;
 
     private bool alreadyHandledVoicelines;
-
 
     private void Start()
     {
@@ -48,6 +48,7 @@ public class BossAttackScript : MonoBehaviour
         defaultSpeed = gameObject.GetComponent<AIPath>().maxSpeed;
     }
 
+    private float sustainAttackCounter = 0.0f;
     void Update()
     {
         if (duration >= attackDuration)
@@ -140,6 +141,17 @@ public class BossAttackScript : MonoBehaviour
             trapSFX.Play();
             painSFX.Play();
             HandleTrap(collision.gameObject);
+        }
+    }
+
+    public void HandleDamage(float damageHP)
+    {
+        painSFX.Play();
+        HP -= damageHP;
+        if (HP <= 0)
+        {
+            gameObject.GetComponent<AIPath>().maxSpeed = 0.0f;
+            Destroy(gameObject, 1);
         }
     }
 
