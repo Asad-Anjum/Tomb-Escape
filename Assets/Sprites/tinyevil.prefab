@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 6725340615563990434}
   - component: {fileID: 5401471048319550362}
   - component: {fileID: 4187657172997384931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tinyevil
   m_TagString: Chaser
   m_Icon: {fileID: 0}

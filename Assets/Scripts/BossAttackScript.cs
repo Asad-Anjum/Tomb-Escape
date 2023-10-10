@@ -90,7 +90,7 @@ public class BossAttackScript : MonoBehaviour
                 if (enemiesToDamage[i].gameObject.tag == "Player")
                 {
                     // WHAT should happen to player?;
-                    Debug.Log("ENEMY HIT PLAYER!!!");
+                    //Debug.Log("ENEMY HIT PLAYER!!!");
                     hitPlayer = true;
                 }
             }
