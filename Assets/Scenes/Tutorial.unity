@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 615587030}
   m_Layer: 5
   m_Name: EscapeTutorial
-  m_TagString: Explore Tutorial
+  m_TagString: Escape Tutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
