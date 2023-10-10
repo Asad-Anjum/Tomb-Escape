@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0feb0fe3ca387448cff6947dd58ed6, type: 3}
+  m_Name: CorridorTemplateSet
+  m_EditorClassIdentifier: 
+  RoomTemplates:
+  - {fileID: 2631460472232982691, guid: 326f9e21425c0bb4dafb0a94dff2df30, type: 3}
+  - {fileID: 2631460472232982691, guid: d28de0b96926d3045a967f9bf3895c87, type: 3}
+  - {fileID: 2631460472232982691, guid: 81916a321672fe748a04700948d25afa, type: 3}
+  - {fileID: 2631460472232982691, guid: 4eb65fa41453f594eb26d014c2367d94, type: 3}
+  - {fileID: 7077541648864131513, guid: 81ee4e29b262c8446afa4dea184e02ee, type: 3}
+  - {fileID: 7077541648864131513, guid: 1aff52caf7b08574fb495d13b671dedb, type: 3}
+  - {fileID: 4592763371476522880, guid: 54c02cc7c0490cf42b2f06eddb455f5a, type: 3}
+  - {fileID: 6100475222381175732, guid: 74212bc5dbc79444b8376e35b1f72de2, type: 3}

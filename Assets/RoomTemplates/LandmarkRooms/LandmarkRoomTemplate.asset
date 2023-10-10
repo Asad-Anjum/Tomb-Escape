@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0feb0fe3ca387448cff6947dd58ed6, type: 3}
+  m_Name: LandmarkRoomTemplate
+  m_EditorClassIdentifier: 
+  RoomTemplates:
+  - {fileID: 6344563002007095720, guid: b9bb9fb58a6c2ed44ade70792b7690d6, type: 3}
+  - {fileID: 6344563002007095720, guid: fadddbe88327171489df7b7064898662, type: 3}
+  - {fileID: 9220236716176498252, guid: 10e065306a23ac744a36aedb9df2b495, type: 3}
+  - {fileID: 4933017584842437117, guid: db2ed0413aee1e741806c203f4f66d07, type: 3}
+  - {fileID: 520409652557903040, guid: 89bfadad7557cf1478dd28d6faba649c, type: 3}
+  - {fileID: 6285836244922106877, guid: ecf68d39e44373b449014a38222b30d8, type: 3}
+  - {fileID: 5707458839441005740, guid: 45273033b1a01594f96dd2900084247e, type: 3}
