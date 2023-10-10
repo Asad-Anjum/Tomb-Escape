@@ -25,6 +25,7 @@ public class BossAttackScript : MonoBehaviour
     public AudioSource missedSFX;
     public AudioSource warningSFX;
     public AudioSource trapSFX;
+    public AudioSource painSFX;
     public float warningSFXDistance = 7f;
     public float voicelineCooldown = 7f;
     private float voicelineCDCountdown;
@@ -137,6 +138,7 @@ public class BossAttackScript : MonoBehaviour
         if (collision.gameObject.tag == "Trap")
         {
             trapSFX.Play();
+            painSFX.Play();
             HandleTrap(collision.gameObject);
         }
     }
