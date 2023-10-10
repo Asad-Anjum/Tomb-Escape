@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0feb0fe3ca387448cff6947dd58ed6, type: 3}
-  m_Name: StartRoomsTemplateSet
+  m_Name: BossRoomsTemplateSet
   m_EditorClassIdentifier: 
   RoomTemplates:
   - {fileID: 2171578542849103085, guid: e7ba70a457cd50c42b2c8421d8713b3f, type: 3}
