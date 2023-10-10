@@ -313,9 +313,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1070738055}
     - target: {fileID: 1435600572, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: chest
+      value: 
+      objectReference: {fileID: 5019584194661322588, guid: 155a472a743825f41a25476bae0de917, type: 3}
+    - target: {fileID: 1435600572, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: enrage
+      value: 
+      objectReference: {fileID: 4603401263481544972, guid: 7d8284274f217ad4d930dec54e419293, type: 3}
+    - target: {fileID: 1435600572, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
       propertyPath: burnText
       value: 
       objectReference: {fileID: 2085855695}
+    - target: {fileID: 1435600572, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: dropPoint
+      value: 
+      objectReference: {fileID: 796938601}
+    - target: {fileID: 1435600572, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: specialChest
+      value: 
+      objectReference: {fileID: 6846985610920613527, guid: 0798745a523a92f4fa3980e9c94a7c35, type: 3}
+    - target: {fileID: 1435600573, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4845002041082278405, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -770,6 +790,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726291027}
   m_CullTransparentMesh: 1
+--- !u!4 &796938601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8010532594843231950, guid: 229645076e0ad914384d041e781f9ea7, type: 3}
+  m_PrefabInstance: {fileID: 142409332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &946674204
 GameObject:
   m_ObjectHideFlags: 0

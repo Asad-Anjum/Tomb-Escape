@@ -178,7 +178,7 @@ public class CharacterController : MonoBehaviour
     {
         Debug.Log("Trap"); // STOP ENEMY FOR 2 SECONDS WHEN HE STEPS ON THIS
         GameObject trap = Instantiate(trapPrefab, transform.position, Quaternion.identity);
-        Physics.IgnoreCollision(trap.transform.GetComponent<Collider>(), GetComponent<Collider>());
+        Physics2D.IgnoreCollision(trap.transform.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
     public void Map()
