@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Edgar.Unity;
 using UnityEngine;
-using Pathfinding;
 
 namespace GameManager
 {
@@ -27,17 +26,10 @@ namespace GameManager
         {
             // Start the generator coroutine
             _generator.Generate();
-
-            // change layername of walls... Why does this have to be a pain?
-            GameObject generatedLevel = GameObject.Find("Generated Level");
-            GameObject wallsGameObject = generatedLevel.transform.Find("Tilemaps").transform.Find("Walls").gameObject;
-            wallsGameObject.layer = LayerMask.NameToLayer("Walls");
-            Debug.Log("walls layer applied");
-
-            // start calculation A* WHY IS IT NOT SCANNING>??????
-            AstarPath.active.Scan();
-            Debug.Log("scanned...");
-
+            
+            
+            // start calculation A*
+            
             yield break;
         }
     }
