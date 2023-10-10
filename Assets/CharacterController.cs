@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Pathfinding;
 using Random = UnityEngine.Random;
 
 public class CharacterController : MonoBehaviour
@@ -21,6 +22,8 @@ public class CharacterController : MonoBehaviour
 
     public GameObject map;
     private GameObject _marker;
+
+    private bool mapScanned;
 
     private void Awake()
     {
@@ -42,9 +45,18 @@ public class CharacterController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         if (movement.x != 0 || movement.y != 0)
+        {
             anim.SetFloat("Vertical Movement", 1f);
+            if (!mapScanned) // this is a very shitty solution to the pathfinder not scanning issue.
+            {
+                AstarPath.active.Scan();
+                mapScanned = true;
+            }
+        }
         else
+        {
             anim.SetFloat("Vertical Movement", 0f);
+        }
 
 
         Vector3 mousePos = Input.mousePosition;

@@ -1587,6 +1587,7 @@ public class AstarPath : VersionedMonoBehaviour {
 	/// </summary>
 	/// <param name="graphsToScan">The graphs to scan. If this parameter is null then all graphs will be scanned</param>
 	public void Scan (NavGraph[] graphsToScan = null) {
+		Debug.Log("SDJKFASHJKLDFJKLASDF!!! SCANNED!!!!!wtf");
 		var prevProgress = new Progress();
 
 		Profiler.BeginSample("Scan");
