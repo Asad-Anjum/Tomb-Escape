@@ -41,7 +41,8 @@ namespace Edgar.Unity
                 }
                 catch (TimeoutException e)
                 {
-                    HandleTimeoutException(e, payload);
+                    // TODO I don't know what's the point here, i just comment this one
+                    // HandleTimeoutException(e, payload);
                     throw;
                 }
                 catch (NoSuitableShapeForRoomException e)
