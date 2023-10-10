@@ -48,7 +48,6 @@ public class BossAttackScript : MonoBehaviour
         defaultSpeed = gameObject.GetComponent<AIPath>().maxSpeed;
     }
 
-    private float sustainAttackCounter = 0.0f;
     void Update()
     {
         if (duration >= attackDuration)
@@ -141,6 +140,11 @@ public class BossAttackScript : MonoBehaviour
             trapSFX.Play();
             painSFX.Play();
             HandleTrap(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Chest")
+        {
+            Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<CircleCollider2D>());
         }
     }
 
