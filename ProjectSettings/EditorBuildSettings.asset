@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 54e82782da9c840afacdb7705dd403d9
   - enabled: 1
-    path: Assets/Scenes/PCGTest.unity
-    guid: 0a9fc888e973ec64ea0b06d68c881a46
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: c46b14c597072df43a5423115a18e090
+  - enabled: 1
+    path: Assets/Scenes/PCGTest.unity
+    guid: 0a9fc888e973ec64ea0b06d68c881a46
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: c2373bf8555b24467a8e5d9dfe2209ff
