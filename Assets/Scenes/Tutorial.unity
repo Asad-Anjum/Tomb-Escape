@@ -48598,6 +48598,8 @@ MonoBehaviour:
   escaping: 0
   activate: 0
   burns: 0
+  normalTheme: {fileID: 0}
+  global: {fileID: 247998613}
 --- !u!114 &1598839137
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public int burns;
 
     public AudioSource normalTheme;
+    public UnityEngine.Rendering.Universal.Light2D global;
 
 
 
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour
         obs = (GameObject[]) Object.FindObjectsOfType(typeof(GameObject));
         if(activate)
         {
+            global.intensity = 0;
             int abilityLayer = LayerMask.NameToLayer("Abilities");
             int enemyLayer = LayerMask.NameToLayer("Enemy");
             int torchLayer = LayerMask.NameToLayer("Torch");
@@ -35,10 +37,10 @@ public class GameController : MonoBehaviour
                 // {
                 //     Destroy(obs[i]);
                 // }
-                if(obs[i].tag == "Global Light")
-                {
-                    obs[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 0;
-                }
+                // if(obs[i].tag == "Global Light")
+                // {
+                    
+                // }
                 if(obs[i].tag == "Player Torch")
                 {
                     obs[i].GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1f;
